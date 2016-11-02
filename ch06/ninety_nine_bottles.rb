@@ -15,3 +15,25 @@
 # Verse 0
 # No more bottles of beer on the wall, no more bottles of beer.
 # Go to the store and buy some more, 99 bottles of beer on the wall...
+
+this_many = 99
+
+until this_many == 2
+  puts "#{this_many} bottles of beer on the wall, #{this_many} bottles of beer."
+  this_many-= 1
+  puts "Take one down, pass it around, #{this_many} bottles of beer on the wall."
+  puts "If one of those bottles should happen to fall, #{this_many}" +
+       " bottles of beer on the wall."
+  puts
+end
+
+puts "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down, pass it" +
+     " around, 1 bottle of beer on the wall.\nIf one of those bottles should" +
+     " happen to fall, 1 bottle of beer on the wall."
+puts
+puts "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down, pass it" +
+     " around, 0 bottles of beer on the wall.\nIf that bottle should happen" +
+     "to fall, 0 bottles of beer on the wall."
+puts
+puts "No more bottles of beer on the wall, no more bottles of beer.\nGo to the" +
+     " store and buy some more, 99 bottles of beer on the wall."

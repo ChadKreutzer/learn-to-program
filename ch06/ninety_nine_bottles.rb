@@ -16,24 +16,23 @@
 # No more bottles of beer on the wall, no more bottles of beer.
 # Go to the store and buy some more, 99 bottles of beer on the wall...
 
-this_many = 99
+bottle_s = 99
+def this_many(num)
+  num == 1 ? "#{num} bottle" : "#{num} bottles"
+end
 
-until this_many == 2
-  puts "#{this_many} bottles of beer on the wall, #{this_many} bottles of beer."
-  this_many-= 1
-  puts "Take one down, pass it around, #{this_many} bottles of beer on the wall."
-  puts "If one of those bottles should happen to fall, #{this_many}" +
-       " bottles of beer on the wall."
+def that_or_those(num)
+  num == 0 ? "that bottle" : "one of those bottles"
+end
+
+until bottle_s == 0
+  puts "#{this_many(bottle_s)} of beer on the wall, #{this_many(bottle_s)} of beer."
+  bottle_s -= 1
+  puts "Take one down, pass it around, #{this_many(bottle_s)} of beer on the wall.\n" +
+       "If #{that_or_those(bottle_s)} should happen to fall, #{this_many(bottle_s)}" +
+       " of beer on the wall."
   puts
 end
 
-puts "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down, pass it" +
-     " around, 1 bottle of beer on the wall.\nIf one of those bottles should" +
-     " happen to fall, 1 bottle of beer on the wall."
-puts
-puts "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down, pass it" +
-     " around, 0 bottles of beer on the wall.\nIf that bottle should happen" +
-     "to fall, 0 bottles of beer on the wall."
-puts
 puts "No more bottles of beer on the wall, no more bottles of beer.\nGo to the" +
      " store and buy some more, 99 bottles of beer on the wall."

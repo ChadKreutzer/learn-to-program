@@ -18,3 +18,5 @@
 # previous program so that you have to shout BYE three times in a row. Make
 # sure to test your program: if you shout BYE three times, but not in a row,
 # you should still be talking to grandma.
+
+year = rand(1930..1950)

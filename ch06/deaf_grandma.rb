@@ -19,4 +19,19 @@
 # sure to test your program: if you shout BYE three times, but not in a row,
 # you should still be talking to grandma.
 
-year = rand(1930..1950)
+bye_count = 0
+
+puts "What do you have to say to grandma?"
+while bye_count < 3 do
+  some_year = rand(1930..1950)
+  i_say = gets.chomp
+  if i_say == i_say.upcase
+    i_say == "BYE" ? bye_count += 1 : bye_count = 0
+    if bye_count < 3
+      puts "NO, NOT SINCE #{some_year}!"
+    end
+  else 
+    puts "HUH?! SPEAK UP, SONNY!"
+  end
+end
+puts "BYE SONNY, DON'T BE A STRANGER!"

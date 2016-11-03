@@ -15,7 +15,7 @@ end_year = gets.chomp.to_i
 
 while year <= end_year do
   if year % 4 == 0
-    leap_years += 1  unless year % 100 == 0 && year % 400 != 0
+    leap_years += 1  unless year % 100 == 0 and year % 400 != 0
   end
   year += 1
 end

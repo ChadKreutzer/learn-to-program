@@ -6,3 +6,17 @@
 # divisible by 400 (like 1600 and 2000, which were in fact leap years).
 # (Yes, it's all pretty confusing, but not as confusing as having July in
 # the middle of the winter, which is what would eventually happen.)
+
+leap_years = 0
+print "Enter the start year: >"
+year = gets.chomp.to_i
+print "Enter the end year: >"
+end_year = gets.chomp.to_i
+
+while year <= end_year do
+  if year % 4 == 0
+    leap_years += 1  unless year % 100 == 0 && year % 400 != 0
+  end
+  year += 1
+end
+puts "There were #{leap_years} leap years in that range."

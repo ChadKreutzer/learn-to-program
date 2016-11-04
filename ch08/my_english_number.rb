@@ -19,7 +19,8 @@ def englishNumber number
   teenagers =  { '11' => 'eleven', '12' => 'twelve', '13' => 'thirteen',
                  '14' => 'fourteen', '15' => 'fifteen', '16' => 'sixteen',
                  '17' => 'seventeen', '18' => 'eighteen', '19' => 'nineteen' }
-  bigNumbers = { '2' => 'hundred', '3' => 'thousand', '6' => 'million' }
+  bigNumbers = { '1' => 'tens', '2' => 'hundred', '3' => 'thousand',
+                 '6' => 'million' }
   
   big_number_place = number.to_s.length - 1
   left  = number

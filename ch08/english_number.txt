@@ -1,0 +1,28 @@
+take in number
+  check if number is too big or too small
+
+  check if number is 0
+
+find number of digits
+
+if number of digits is bigger than 6 
+  find number of millions
+    find number of digits of number of millions
+    if number of digits is bigger than 2 find number of hundreds of millions
+      if number of digits is bigger than 1
+        if number is bigger than 19 find number of tens of millions
+        find teen number of millions
+      find number of millions
+
+if number if digits is bigger than 3 find number of thousands
+  find number of digits of number of thousands
+  if number of digits is bigger than 2 find number of hundreds of thousands
+
+if number of digits is bigger than 2 find number of hundreds
+
+if number of digits is bigger than 1
+  if number is bigger than 19 find number of 10s
+  find teen number
+
+find number
+  

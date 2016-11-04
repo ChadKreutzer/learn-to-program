@@ -57,18 +57,3 @@ def englishNumber number
   
   numString
 end
-
-puts englishNumber(  0)
-puts englishNumber(  9)
-puts englishNumber( 10)
-puts englishNumber( 11)
-puts englishNumber( 17)
-puts englishNumber( 32)
-puts englishNumber( 88)
-puts englishNumber( 99)
-puts englishNumber(100)
-puts englishNumber(101)
-puts englishNumber(234)
-puts englishNumber(3_211)
-puts englishNumber(999_999)
-puts englishNumber(1_000_000_000_000)

@@ -20,15 +20,15 @@
 
 $indent = 0
 def log block_description, &block
-  this_level = $indent
-  $indent = this_level + 1
+  $indent += 1
   
-  puts "#{"  " * this_level}Beginning '#{block_description}'..."
+  puts "#{"  " * $indent}Beginning '#{block_description}'..."
   
   block_return = block.call
   
   
-  puts "#{"  " * this_level}...'#{block_description}' finished, returning: #{block_return}"
+  puts "#{"  " * $indent}...'#{block_description}' finished, returning: #{block_return}"
+  $indent -= 1
   
   
 end

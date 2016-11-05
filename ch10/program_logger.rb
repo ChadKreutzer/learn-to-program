@@ -14,3 +14,21 @@
 # * ..."yet another block" finished, returning:  I like Thai food!
 # * ..."outer block" finished, returning:  false
 
+def log block_description, &block
+  puts "Beginning '#{block_description}'..."
+  
+  block_return = block.call
+  
+  puts "...'#{block_description}' finished, returning: #{block_return}"
+end
+
+log "outer block" do
+  log "some little block" do
+    5
+  end
+  log "yet another block" do
+    "I like Thai food!"
+  end
+  false
+end
+  

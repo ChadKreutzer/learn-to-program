@@ -18,3 +18,40 @@
 # *   ..."yet another block" finished, returning:  I love Indian food!
 # * ..."outer block" finished, returning:  true
 
+$indent = 0
+def log block_description, &block
+  this_level = $indent
+  $indent = this_level + 1
+  
+  puts "#{"  " * this_level}Beginning '#{block_description}'..."
+  
+  block_return = block.call
+  
+  
+  puts "#{"  " * this_level}...'#{block_description}' finished, returning: #{block_return}"
+  
+  
+end
+
+log "outer block" do
+  log "some little block" do
+    log "teeny-tiny block" do
+      "lots of love"
+    end
+    42
+  end
+  log "yet another block" do
+    "I love Indian food!"
+  end
+  true
+end
+
+# actual output:
+# * Beginning "outer block"...
+# *   Beginning "some little block"...
+# *     Beginning "teeny-tiny block"...
+# *     ..."teeny-tiny block" finished, returning:  lots of love
+# *   ..."some little block" finished, returning:  42
+# *       Beginning "yet another block"...
+# *       ..."yet another block" finished, returning:  I love Indian food!
+# * ..."outer block" finished, returning:  true
